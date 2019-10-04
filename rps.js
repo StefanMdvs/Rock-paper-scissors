@@ -49,7 +49,8 @@
                                             alert('Well done! You won by ' + (humanScore - computerScore) + ' points!');
             
         } else if (computerScore > humanScore) {
-            alert('Ups! Computer was smarter this time, winning by ' + (computerScore - humanScore) + ' points!');
+            computerScore - humanScore == 1 ? alert('Ups! Computer was smarter this time, winning by ' + (computerScore - humanScore) + ' point!') :
+                                              alert('Ups! Computer was smarter this time, winning by ' + (computerScore - humanScore) + ' points!');  
         } else {
             alert('Draw');
         }

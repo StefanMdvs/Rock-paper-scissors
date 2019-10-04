@@ -8,38 +8,31 @@
         let options = ['rock', 'paper', 'scissors'];
         return options[Math.floor(Math.random() * options.length)];
     }
-        
-    //console.log(playRound(playerSelection, computerSelection));
-
+    
     function playRound (playerSelection, computerSelection) {
-        playerSelection = prompt('choose rock, paper or scissors');
+        playerSelection = prompt('Choose Rock, Paper or Scissors');
         computerSelection = computerPlay();
         
         if (playerSelection === computerSelection) {
-            console.log('draw');
+            alert('Draw');
         } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || 
                     (playerSelection == 'scissors' && computerSelection == 'paper') || 
                     (playerSelection == 'paper' && computerSelection == 'rock')) {
-                        console.log('you win! ' + playerSelection + ' beats ' + computerSelection);
+                        alert('You win the round! ' + playerSelection + ' beats ' + computerSelection);
                         humanScore++;
         } else if ((playerSelection == 'scissors' && computerSelection == 'rock') || 
                     (playerSelection == 'paper' && computerSelection == 'scissors') || 
                     (playerSelection == 'rock' && computerSelection == 'paper')) {
-                        console.log('you lost! ' + computerSelection + ' beats ' + playerSelection);
+                        alert('You lost the round! ' + computerSelection + ' beats ' + playerSelection);
                         computerScore++;
         } else {
-            console.log('please choose rock, paper or scissors!');
-            rounds--;
+            alert('Please choose rock, paper or scissors!');
+            
         }
 
         
     }
     function game() {
-        /*while (rounds <= 5) {
-            playRound();
-            rounds++;
-        }*/
-        
         for (let i = 0; i < rounds; i++) {
             playRound();
             rounds[i];

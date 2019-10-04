@@ -1,0 +1,1 @@
+This is my attempt of creating the Rock, paper scissors game. My objective was getting the functions in the right order so that the game would run accordingly.
